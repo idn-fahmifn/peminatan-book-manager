@@ -12,7 +12,8 @@ class CategorieController extends Controller
      */
     public function index()
     {
-        return view('kategori.index');
+        $data = Categorie::all();
+        return view('kategori.index', compact('data'));
     }
 
     /**
@@ -28,7 +29,10 @@ class CategorieController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+        // dd($data);
+        Categorie::create($data);
+        return back();
     }
 
     /**

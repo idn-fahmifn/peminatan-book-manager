@@ -6,11 +6,11 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">
-                    <form action="#" method="post">
+                    <form action="{{route('categories.store')}}" method="post">
                         @csrf
                         <div class="form-group">
                             <label class="form-label">Nama Kategori</label>
-                            <input type="text" name="nama_kategori" id="" class="form-control">
+                            <input type="text" name="kategori" class="form-control">
                         </div>
                         <div class="form-group mt-4 mb-4">
                             <button type="submit" class="btn btn-primary">Tambah Kategori</button>
@@ -25,6 +25,19 @@
                                 <th>Nama Kategori</th>
                                 <th>Pilihan</th>
                             </thead>
+                            <tbody>
+                                @foreach ($data as $item)
+                                <tr>
+                                    <td>{{$item->kategori}}</td>
+                                    <td>
+                                        <form action="#" method="post">
+                                            <button type="submit" class="btn btn-danger">Hapus</button>
+                                            <a href="#" class="btn btn-info">Detail</a>
+                                        </form>
+                                    </td>
+                                </tr>
+                                @endforeach
+                            </tbody>
                         </table>
                     </div>
                 </div>
