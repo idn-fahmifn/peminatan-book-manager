@@ -32,7 +32,7 @@
                                     <td>
                                         <form action="#" method="post">
                                             <button type="submit" class="btn btn-danger">Hapus</button>
-                                            <a href="#" class="btn btn-info">Detail</a>
+                                            <a href="{{route('categories.show', $item->id)}}" class="btn btn-info">Detail</a>
                                         </form>
                                     </td>
                                 </tr>

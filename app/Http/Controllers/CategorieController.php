@@ -38,9 +38,9 @@ class CategorieController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Categorie $categorie)
+    public function show($id)
     {
-        //
+        return view('kategori.detail');
     }
 
     /**
